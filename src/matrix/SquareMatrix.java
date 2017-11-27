@@ -116,10 +116,10 @@ public class SquareMatrix extends Matrix{
 			}
 			double temp=0.0;
 			if(Hessenberg.GetElementValue(j+1, j)<1e-5){
-				temp=u.GetEuclideanNorm("2");
+				temp=u.GetNorm("2");
 			}
 			else{
-				temp=(-1.0)*Math.signum(Hessenberg.GetElementValue(j+1, j))*u.GetEuclideanNorm("2");
+				temp=(-1.0)*Math.signum(Hessenberg.GetElementValue(j+1, j))*u.GetNorm("2");
 			}
 			Vector e=new Vector(Size);
 			e.SetElementValue(j+1, 1.0);

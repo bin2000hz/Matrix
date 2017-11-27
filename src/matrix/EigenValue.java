@@ -192,7 +192,7 @@ public class EigenValue {
 				GaussianElimination GE=new GaussianElimination(A, x.ToArray());
 				double[] uu=GE.GetSolution();
 				y.SetVectorValue(uu);
-				x=y.MultiplyConst(1.0/y.GetEuclideanNorm("2"));
+				x=y.MultiplyConst(1.0/y.GetNorm("2"));
 				EigenVector[k].Copy(x);
 			}
 			

@@ -53,7 +53,7 @@ public class GaussSeidelMethod {
 		boolean result=false;
 		Vector Value=CoefficientMatrix.MultiplyVector(Solution);
 		Value=Value.Subtract(ConstantVector);
-		Residual=Value.GetEuclideanNorm("2");
+		Residual=Value.GetNorm("2");
 		if(Residual<1e-5){
 			result=true;
 		}

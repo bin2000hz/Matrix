@@ -137,7 +137,7 @@ public class Vector {
 		}
 	}
 	
-	public double GetEuclideanNorm(String norm){
+	public double GetNorm(String norm){
 		double result=0.0;
 		if(norm.trim().toLowerCase().equals("infinite")){
 			result=Math.abs(vector[0]);
